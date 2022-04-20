@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="1.0">
+<head><title>macOS Podcast exporter</title><dateCreated>3/24/2022, 2:08:12 PM</dateCreated></head>
+<body><outline type="rss" text="Playbook Deep Dive" xmlUrl="http://feeds.megaphone.fm/serdcast?limit=300" />
+<outline type="rss" text="AWS Podcast" xmlUrl="https://d3gih7jbfe3jlq.cloudfront.net/aws-podcast.rss" />
+<outline type="rss" text="Radiolab" xmlUrl="http://feeds.wnyc.org/radiolab" />
+<outline type="rss" text="This Week in Tech (Audio)" xmlUrl="http://leoville.tv/podcasts/twit.xml" />
+<outline type="rss" text="Do By Friday" xmlUrl="https://rss.simplecast.com/podcasts/2389/rss" />
+<outline type="rss" text="AWS Morning Brief" xmlUrl="https://feeds.transistor.fm/aws-morning-brief" />
+<outline type="rss" text="Team Building Saves The World" xmlUrl="https://static.adorilabs.com/feed/team-building-across-the-world.xml" />
+<outline type="rss" text="My Brother, My Brother And Me" xmlUrl="http://mbmbam.libsyn.com/rss" />
+<outline type="rss" text="The Daily" xmlUrl="http://feeds.podtrac.com/zKq6WZZLTlbM" />
+<outline type="rss" text="Jordan, Jesse, GO!" xmlUrl="http://feeds.feedburner.com/thornmorris" />
+<outline type="rss" text="Sound Opinions" xmlUrl="http://feeds.feedburner.com/TheSoundOpinionsPodcast" />
+<outline type="rss" text="Wong Notes" xmlUrl="https://feeds.captivate.fm/wongnotes/" />
+<outline type="rss" text="You Made It Weird with Pete Holmes" xmlUrl="http://feeds.feedburner.com/YouMadeItWeird" />
+<outline type="rss" text="Hanselminutes with Scott Hanselman" xmlUrl="https://feeds.simplecast.com/gvtxUiIf" />
+<outline type="rss" text="Tech News Weekly (Audio)" xmlUrl="http://feeds.twit.tv/tnw.xml" />
+<outline type="rss" text="No Guitar Is Safe" xmlUrl="http://feeds.soundcloud.com/users/soundcloud:users:162332893/sounds.rss" />
+<outline type="rss" text="Back to Work" xmlUrl="http://feeds.5by5.tv/b2w" />
+<outline type="rss" text="The Guitar Shop Podcast" xmlUrl="http://www.wadesguitarshop.com/GuitarShopPodcast.xml" />
+<outline type="rss" text="On The Metal" xmlUrl="https://feeds.transistor.fm/on-the-metal-0294649e-ec23-4eab-975a-9eb13fd94e06" />
+<outline type="rss" text="Conan O’Brien Needs A Friend" xmlUrl="https://www.omnycontent.com/d/playlist/aaea4e69-af51-495e-afc9-a9760146922b/0a686f81-0eeb-455b-98be-ab0d00055d5e/1fab2b0b-a7f0-4d71-bf6d-ab0d00055d6c/podcast.rss" />
+<outline type="rss" text="SmartLess" xmlUrl="https://feeds.simplecast.com/pvzhyDQn" />
+<outline type="rss" text="The Bob Lefsetz Podcast" xmlUrl="http://feeds.podtrac.com/2n7wFVhUHmfa" />
+<outline type="rss" text="Stuff You Missed in History Class" xmlUrl="https://feeds.megaphone.fm/stuffyoumissedinhistoryclass" />
+<outline type="rss" text="Six String Bliss: The Guitar Podcast" xmlUrl="http://sixstringbliss.libsyn.com/rss" />
+<outline type="rss" text="Guitar Music Theory" xmlUrl="http://guitarmusictheory.libsyn.com/rss" />
+<outline type="rss" text="60 Minutes" xmlUrl="https://rss.art19.com/60-minutes" />
+<outline type="rss" text="Sharpen That Axe" xmlUrl="http://feeds.soundcloud.com/users/soundcloud:users:293999783/sounds.rss" />
+<outline type="rss" text="On the Media" xmlUrl="http://feeds.wnyc.org/onthemedia" />
+<outline type="rss" text="Guitar Speak Podcast" xmlUrl="http://guitarspeakpodcast.libsyn.com/rss" />
+<outline type="rss" text="The Ron Burgundy Podcast" xmlUrl="https://feeds.megaphone.fm/HSW7933892085" />
+<outline type="rss" text="The Wilderness" xmlUrl="http://feeds.feedburner.com/the-wilderness" />
+<outline type="rss" text="The Thrilling Adventure Hour" xmlUrl="https://rss.art19.com/the-thrilling-adventure-hour" />
+<outline type="rss" text="The Turnaround with Jesse Thorn" xmlUrl="http://maximumfun.org/feeds/tt.xml" />
+<outline type="rss" text="Self-Helpless" xmlUrl="https://rss.art19.com/self-helpless" />
+<outline type="rss" text="The Tech Guy (Audio)" xmlUrl="http://feeds.twit.tv/kfi.xml" />
+<outline type="rss" text="Bullseye with Jesse Thorn" xmlUrl="http://www.npr.org/rss/podcast.php?id=510309" />
+<outline type="rss" text="Road Work" xmlUrl="http://feeds.5by5.tv/roadwork" />
+<outline type="rss" text="Freakonomics Radio" xmlUrl="http://feeds.feedburner.com/freakonomicsradio" />
+<outline type="rss" text="Twenty Thousand Hertz" xmlUrl="http://feeds.megaphone.fm/20k" />
+<outline type="rss" text="The Album Years" xmlUrl="https://anchor.fm/s/2019eb80/podcast/rss" />
+<outline type="rss" text="Judge John Hodgman" xmlUrl="http://feeds.feedburner.com/todayinthepast" />
+<outline type="rss" text="Serverless Chats" xmlUrl="https://feeds.transistor.fm/serverless-chats" />
+<outline type="rss" text="Screaming in the Cloud" xmlUrl="https://feeds.transistor.fm/screaming-in-the-cloud" />
+<outline type="rss" text="Syntax - Tasty Web Development Treats" xmlUrl="https://feed.syntax.fm/rss" />
+<outline type="rss" text="60 Cycle Hum: The Guitar Podcast!" xmlUrl="https://sixtycyclehum.podbean.com/feed.xml" />
+<outline type="rss" text="Happy Path Programming" xmlUrl="https://anchor.fm/s/2ed56aa0/podcast/rss" />
+<outline type="rss" text="Fresh Air" xmlUrl="https://www.npr.org/rss/podcast.php?id=381444908" />
+<outline type="rss" text="Ask the Guitar Coach (International Edition)" xmlUrl="https://pinecast.com/feed/ask-the-guitar-coach-international" />
+<outline type="rss" text="Views on Vue" xmlUrl="https://feeds.feedwrench.com/views-on-vue.rss" />
+<outline type="rss" text="Adventures in Angular" xmlUrl="https://feeds.feedwrench.com/AdventuresInAngular.rss" />
+<outline type="rss" text="Chasing Frets" xmlUrl="https://feeds.captivate.fm/chasing-frets/" />
+<outline type="rss" text="The Tone Mob Podcast" xmlUrl="http://tonemob.com/feed/podcast" />
+<outline type="rss" text="MacBreak Weekly (Audio)" xmlUrl="http://leoville.tv/podcasts/mbw.xml" />
+<outline type="rss" text="Podcast – Cory Doctorow's craphound.com" xmlUrl="http://feeds.feedburner.com/doctorow_podcast" />
+<outline type="rss" text="Chariot TechCast" xmlUrl="https://chariotsolutions.com/podcasts/show/techcast/feed/" />
+</opml>
