@@ -9,7 +9,7 @@ import React, { useState } from 'react';
 /**
  * Create skeletons on the server side before loading component
  */
-export function getStaticProps() {
+export function getStaticProps(context) {
 
   return {
     props: {
@@ -53,6 +53,8 @@ export default function Podcasts({defaultNumRows}) {
   const [numRows, setNumRows] = useState(defaultNumRows);
   const {data, error, isValidating, mutate} = useSWR(`http://localhost:3010/podcasts/feeds?numRows=${numRows}`, fetcher);
   const router = useRouter();
+  const optimizeImages = router.query.optimizeImages == 'true';
+
   if (error) {
     return <pre>{ JSON.stringify(error) }</pre>
   }
@@ -64,7 +66,7 @@ export default function Podcasts({defaultNumRows}) {
   const cards = data?.map((p:any) =>
     <ImageCard
       key={p.slug}
-      image={p.image_url}>
+      image={p.image_url} optimizeImages={optimizeImages}>
       <div
         className="
            p-6 py-4
@@ -84,7 +86,7 @@ export default function Podcasts({defaultNumRows}) {
         p-3
         text-white
       ">
-        <Link href={`/standard/podcast/${p.slug}`}>Show Details</Link>
+        <Link href={`podcast/${p.slug}?optimizeImages=${optimizeImages}`}>Show Details</Link>
       </button>
     </ImageCard>);
   return (
@@ -100,7 +102,8 @@ export default function Podcasts({defaultNumRows}) {
         <option value={50}>50</option>
       </select>
       <br/>
-      <CardContainer title="Client-fetched Podcasts using SWR" cards={cards} cols={3}/>
+      <CardContainer title={`Client-fetched Podcasts using SWR - Image Optimization? ${optimizeImages ? "Yes" : "No"}`}
+                     cards={cards} cols={3}/>
     </>
   );
 }

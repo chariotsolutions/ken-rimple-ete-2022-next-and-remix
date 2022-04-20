@@ -8,20 +8,29 @@ import {getFeedAndEpisodesBySlug} from '@/api/podcasts';
 export async function getServerSideProps(context) {
   // get route param for slug
   const slug = context.params.slug;
+  console.dir(context.query);
+  const optimizeImages =
+    context.query?.optimizeImages &&
+    context.query?.optimizeImages === 'true';
   const data = await getFeedAndEpisodesBySlug(slug);
   return {
-    props: data
+    props: { ...data, optimizeImages: optimizeImages || false }
   };
 }
 
-export default function PodcastEpisodes({ feedDetails, episodes}) {
+export default function PodcastEpisodes({ feedDetails, episodes, optimizeImages }) {
     let episodeCards = episodes.map((e:FeedItem) => (
         <Card
           key={e.guid}
           title={e.title}>
           <div className="grid grid-cols-2 gap-4">
             <div className="columns-1">
-              <Image alt="feedDetails.name" src={feedDetails.imageUrl} width={200} height={200}/>
+              {optimizeImages &&
+                <Image alt="feedDetails.name" src={feedDetails.imageUrl} width={200} height={200}/>
+              }
+              {!optimizeImages &&
+                <img alt="feedDetails.name" src={feedDetails.imageUrl} width={200} height={200}/>
+              }
             </div>
             <div>
               <div className="pb-1"><span className="text-lg font-bold pr-5">Publication Date</span><span>{e.pubDate}</span></div>
@@ -57,7 +66,7 @@ export default function PodcastEpisodes({ feedDetails, episodes}) {
     return (
       <>
         <div className="container">
-          <Link href={"/ssr/podcasts"} passHref>
+          <Link href={`../podcasts?optimizeImages=${optimizeImages}`} passHref>
             <button className="text-right p-4 m-4 text-white bg-blue-500 rounded-lg">
               Back to Podcasts
             </button>

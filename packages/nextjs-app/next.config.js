@@ -5,7 +5,7 @@ const nextConfig = {
     return [
       {
         source: '/',
-        destination: '/standard/podcasts',
+        destination: '/swr/podcasts',
         permanent: true
       }
     ]

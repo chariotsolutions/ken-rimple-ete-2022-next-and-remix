@@ -3,9 +3,10 @@ import Image from 'next/image';
 interface CardProps {
   children: any;
   image: string;
+  optimizeImages: boolean;
 }
 
-export default function ImageCard({ children, image }: CardProps) {
+export default function ImageCard({ children, image, optimizeImages = false }: CardProps) {
   return (
     <div className="
         relative
@@ -24,7 +25,12 @@ export default function ImageCard({ children, image }: CardProps) {
         grid-cols-2
         ">
           <div>
-            <Image alt="Podcast Image" src={ image } width="200" height="200" className="w-3/5"/>
+            {optimizeImages &&
+              <Image alt="Podcast Image" src={image} width="200" height="200" className="w-3/5"/>
+            }
+            {!optimizeImages &&
+              <img alt="Podcast Image" src={image} width="200" height="200" className="w-3/5" />
+            }
           </div>
           <div className="pb-5">
           { children }

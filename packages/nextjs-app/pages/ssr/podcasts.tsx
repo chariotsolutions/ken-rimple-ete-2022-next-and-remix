@@ -8,18 +8,19 @@ import Link from 'next/link';
 /**
  * SSR loading function
  */
-export async function getServerSideProps() {
+export async function getServerSideProps(context) {
   const data = await getFeeds();
-  return { props: { feeds: [...data]}};
+  const optimizeImages = context.query.optimizeImages === 'true';
+  return { props: { feeds: [...data, optimizeImages]}};
 }
 
-export default function Podcasts({feeds}) {
-
+export default function Podcasts({feeds, optimizeImages}) {
   const router = useRouter();
 
   const cards = feeds.map((p:FeedDetails) =>
     <ImageCard
       key={p.slug}
+      optimizeImages={optimizeImages}
       image={p.imageUrl}>
       <div
         className="
@@ -38,7 +39,7 @@ export default function Podcasts({feeds}) {
         p-3
         text-white
       ">
-        <Link href={`/ssr/podcast/${p.slug}`}>Show Details</Link>
+        <Link href={`/ssr/podcast/${p.slug}?optimizeImages=${optimizeImages}`}>Show Details</Link>
       </button>
     </ImageCard>);
   return (

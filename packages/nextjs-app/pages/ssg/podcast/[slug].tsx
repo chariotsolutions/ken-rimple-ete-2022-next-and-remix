@@ -20,11 +20,11 @@ export async function getStaticProps(context) {
   const slug = context.params.slug;
   const response = await getFeedAndEpisodesBySlug(slug);
   return {
-    props: {feedDetails: response.feedDetails, episodes: response.episodes}
+    props: {optimizeImages: true, feedDetails: response.feedDetails, episodes: response.episodes}
   }
 }
 
-export default function PodcastEpisodes({episodes, feedDetails}) {
+export default function PodcastEpisodes({episodes, feedDetails, optimizeImages}) {
   let episodeCards = episodes.map((e:FeedItem) => (
     <Card
       key = {e.guid}
@@ -32,7 +32,12 @@ export default function PodcastEpisodes({episodes, feedDetails}) {
     >
       <div className="grid grid-cols-2 gap-4">
         <div className="columns-1">
-          <Image src={feedDetails.imageUrl} alt={feedDetails.name} width={200} height={200}/>
+          {optimizeImages &&
+            <Image src={feedDetails.imageUrl} alt={feedDetails.name} width={200} height={200}/>
+          }
+          {!optimizeImages &&
+            <img src={feedDetails.imageUrl} alt={feedDetails.name} width={200} height={200}/>
+          }
         </div>
         <div>
           <div className="pb-1"><span className="text-lg font-bold pr-5">Publication Date</span><span>{e.pubDate}</span></div>
@@ -65,7 +70,7 @@ export default function PodcastEpisodes({episodes, feedDetails}) {
   return (
     <>
       <div className="container">
-        <Link href="/ssg/podcasts"passHref>
+        <Link href={`../podcasts?optimizeImages=${optimizeImages}`} passHref>
           <button className="text-right p-4 m-4 text-white bg-blue-500 rounded-lg">
             Back to Podcasts
           </button>

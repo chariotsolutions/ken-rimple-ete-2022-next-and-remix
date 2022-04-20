@@ -2292,9 +2292,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@powerplayer/react-only-client@workspace:packages/react-only-client":
+"@powerplayer/react-only@workspace:packages/react-only":
   version: 0.0.0-use.local
-  resolution: "@powerplayer/react-only-client@workspace:packages/react-only-client"
+  resolution: "@powerplayer/react-only@workspace:packages/react-only"
   dependencies:
     "@types/jest": ^27.4.1
     "@types/node": ^17.0.24
@@ -13549,9 +13549,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nextjs-client@workspace:packages/nextjs-client":
+"nextjs-app@workspace:packages/nextjs-app":
   version: 0.0.0-use.local
-  resolution: "nextjs-client@workspace:packages/nextjs-client"
+  resolution: "nextjs-app@workspace:packages/nextjs-app"
   dependencies:
     "@types/react": ^17.0.43
     "@types/react-dom": ^17.0.14
@@ -16517,9 +16517,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"remix-client@workspace:packages/remix-client":
+"remix-app@workspace:packages/remix-app":
   version: 0.0.0-use.local
-  resolution: "remix-client@workspace:packages/remix-client"
+  resolution: "remix-app@workspace:packages/remix-app"
   dependencies:
     "@remix-run/dev": ^1.2.3
     "@remix-run/eslint-config": ^1.2.3

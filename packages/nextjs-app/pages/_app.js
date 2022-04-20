@@ -8,9 +8,10 @@ function MyApp({ Component, pageProps }) {
     <div className="container mx-auto my-auto">
       <h1>NextJS PowerPlayer Demo</h1>
       <menu className="container my-5">
-      <Link href="/standard/podcasts"><a className="btn-menu">Using SWR</a></Link>
-      <Link href="/ssr/podcasts"><a className="btn-menu">Using SSR</a></Link>
-      <Link href="/ssg/podcasts"><a className="btn-menu">Using SSG</a></Link>
+      <Link href="/swr/podcasts"><a className="btn-menu">Using SWR</a></Link>
+      <Link href="/swr/podcasts?optimizeImages=true"><a className="btn-menu">Using SWR and Image component</a></Link>
+      <Link href="/ssr/podcasts?optimizeImages=true"><a className="btn-menu">Using SSR</a></Link>
+      <Link href="/ssg/podcasts?optimizeImages=true"><a className="btn-menu">Using SSG</a></Link>
 
       </menu>
       <hr/>

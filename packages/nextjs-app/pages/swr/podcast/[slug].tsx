@@ -10,6 +10,8 @@ import Link from 'next/link';
 export default function PodcastEpisodes() {
   const router = useRouter();
   const {data, error, isValidating} = useSWR(`http://localhost:3010/podcasts/feed/${router.query.slug}`, fetcher);
+  const optimizeImages = router.query.optimizeImages === 'true';
+
 
   if (error) {
     return <p>{error.toString()}</p>
@@ -23,7 +25,12 @@ export default function PodcastEpisodes() {
       >
         <div className="grid grid-cols-2 gap-4">
           <div className="columns-1">
-            <Image src={data.feedDetails.imageUrl} alt={data.feedDetails.name} width={200} height={200}/>
+            {optimizeImages &&
+              <Image src={data.feedDetails.imageUrl} alt={data.feedDetails.name} width={200} height={200}/>
+            }
+            {!optimizeImages &&
+              <img src={data.feedDetails.imageUrl} alt={data.feedDetails.name} width={200} height={200}/>
+            }
           </div>
           <div>
             <div className="pb-1"><span
@@ -57,7 +64,7 @@ export default function PodcastEpisodes() {
     return (
       <>
         <div className="container">
-          <Link href="/standard/podcasts" passHref>
+          <Link href={`../podcasts?optimizeImages=${optimizeImages}`} passHref>
             <button className="text-right p-4 m-4 text-white bg-blue-500 rounded-lg">
               Back to Podcasts
             </button>

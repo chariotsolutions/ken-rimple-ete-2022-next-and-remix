@@ -1,5 +1,5 @@
 {
-  "name": "@powerplayer/react-only-client",
+  "name": "@powerplayer/react-only",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

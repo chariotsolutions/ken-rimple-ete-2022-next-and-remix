@@ -6,7 +6,7 @@ import { useLoaderData } from 'remix';
 import { getFeedAndEpisodesBySlug } from '~/shared/podcast-api.server';
 
 // @ts-ignore
-export const loader = async ({params}) => {
+export const loader = async ({params, req, res}) => {
   // get route param for slug
   return await getFeedAndEpisodesBySlug(params.slug);
 }

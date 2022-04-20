@@ -8,12 +8,12 @@ import Link from 'next/link';
 /**
  * SSG loading function
  */
-export async function getStaticProps() {
+export async function getStaticProps(context) {
   const feeds = await getFeeds();
-  return { props: { feeds } };
+  return { props: { feeds: feeds, optimizeImages: true  } };
 }
 
-export default function Podcasts({feeds}) {
+export default function Podcasts({feeds, optimizeImages}) {
 
   const router = useRouter();
 
@@ -24,7 +24,9 @@ export default function Podcasts({feeds}) {
     (
       <ImageCard
         key={p.slug}
+        optimizeImages={optimizeImages}
         image={p.imageUrl}>
+        OPTIMIZE { optimizeImages }
         <div
           className="
             p-6 py-4 h-auto
@@ -42,7 +44,7 @@ export default function Podcasts({feeds}) {
           p-3
           text-white
         ">
-          { p.slug && <Link href={`/ssg/podcast/${p.slug}`}>Show Details</Link> }
+          { p.slug && <Link href={`podcast/${p.slug}?optimizeImages=${optimizeImages}`}>Show Details</Link> }
         </button>
       </ImageCard>
     ));
