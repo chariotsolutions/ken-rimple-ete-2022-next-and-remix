@@ -571,6 +571,53 @@ h4 {
   --bs-body-bg: #fff;
 }
 
+.dropdown-menu.show {
+  display: block;
+}
+
+.nav-tabs .nav-item.show .nav-link {
+  color: #2563eb;
+  border-color: #2563eb;
+}
+
+.nav-pills .show > .nav-link {
+  background: #2563eb;
+  color: #fff;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.navbar-light .navbar-nav .show > .nav-link {
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.navbar-dark .navbar-nav .show > .nav-link {
+  color: #fff;
+}
+
+.modal.show .modal-dialog {
+  transform: none;
+}
+
+.modal-backdrop.show {
+  opacity: 0.5;
+}
+
+.tooltip.show {
+  opacity: 1;
+}
+
+.offcanvas-backdrop.show {
+  opacity: 0.5;
+}
+
+.offcanvas.show {
+  transform: none;
+}
+
+.timepicker-modal .fade.show {
+  opacity: 1;
+}
+
 @-webkit-keyframes _spinner-grow {
   0% {
     transform: scale(0);
@@ -1310,14 +1357,6 @@ h4 {
   margin-right: auto;
 }
 
-.mt-6 {
-  margin-top: 1.5rem;
-}
-
-.mb-4 {
-  margin-bottom: 1rem;
-}
-
 .ml-2 {
   margin-left: 0.5rem;
 }
@@ -1326,8 +1365,20 @@ h4 {
   margin-right: 0.5rem;
 }
 
+.mt-6 {
+  margin-top: 1.5rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
 .box-border {
   box-sizing: border-box;
+}
+
+.table {
+  display: table;
 }
 
 .grid {
@@ -1338,20 +1389,20 @@ h4 {
   height: auto;
 }
 
-.h-32 {
-  height: 8rem;
-}
-
 .h-4\/5 {
   height: 80%;
 }
 
-.w-3\/5 {
-  width: 60%;
+.h-32 {
+  height: 8rem;
 }
 
 .w-full {
   width: 100%;
+}
+
+.w-3\/5 {
+  width: 60%;
 }
 
 .columns-1 {
@@ -1363,12 +1414,12 @@ h4 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.gap-2 {
-  gap: 0.5rem;
-}
-
 .gap-4 {
   gap: 1rem;
+}
+
+.gap-2 {
+  gap: 0.5rem;
 }
 
 .overflow-clip {
@@ -1425,6 +1476,18 @@ h4 {
   padding-right: 0.5rem;
 }
 
+.pb-1 {
+  padding-bottom: 0.25rem;
+}
+
+.pr-5 {
+  padding-right: 1.25rem;
+}
+
+.pb-2 {
+  padding-bottom: 0.5rem;
+}
+
 .pl-4 {
   padding-left: 1rem;
 }
@@ -1445,20 +1508,8 @@ h4 {
   padding-top: 0.5rem;
 }
 
-.pb-2 {
-  padding-bottom: 0.5rem;
-}
-
 .pb-5 {
   padding-bottom: 1.25rem;
-}
-
-.pb-1 {
-  padding-bottom: 0.25rem;
-}
-
-.pr-5 {
-  padding-right: 1.25rem;
 }
 
 .text-center {
@@ -1477,14 +1528,14 @@ h4 {
   font-family: Inter, sans-serif;
 }
 
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
-
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .font-bold {

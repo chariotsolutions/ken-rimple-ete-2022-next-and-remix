@@ -73,7 +73,9 @@ function processFeedItems(connection, feedId, feedData) {
     try {
       await insertFeedItem(connection, feedId, item);
     } catch (e) {
-      throw e;
+      console.log(`Error!`);
+      console.error(e);
+      throw `Failure inserting ${feedId} ${feedData.guid} - error ${e}`;
     }
   })
 }
@@ -88,7 +90,7 @@ async function insertFeedItem(connection, feedId, item) {
     await connection.none(
       'INSERT INTO feed_item(feed_id, guid, title, description, enclosure_url, pub_date) ' +
       'VALUES($1, $2, $3, $4, $5, $6)',
-      [feedId, item.guid, item.title, item.content, item.enclosure.url, item.pubDate]
+      [feedId, slugify(item.guid), item.title, item.content, item.enclosure.url, item.pubDate]
     );
   } catch (e) {
     throw e;
